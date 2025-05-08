@@ -1,0 +1,24 @@
+# Nome do workflow que aparece na aba Actions
+name: Simple CI
+
+# Quando esse workflow deve ser disparado
+on:
+  push:  # Quando houver um push...
+    branches:
+      - main  # ... na branch main
+
+jobs:
+  build:  # Nome do job (pode ser qualquer nome, aqui é 'build')
+    runs-on: ubuntu-latest  # Define a máquina virtual onde o job será executado
+
+    steps:
+    - uses: actions/checkout@v2  # Primeiro passo: faz o checkout do código (baixa o repositório para a máquina virtual)
+
+    - name: Run echo step  # Nome desse passo específico
+      run: echo " Pipeline ran successfully!"  # Comando que será executado no terminal (neste caso, apenas imprime uma mensagem)
+
+
+# OBS: build é apenas um nome dado ao job.
+# Ele não significa obrigatoriamente que você está “compilando” ou “gerando build” do seu projeto.
+# É só uma identificação para esse conjunto de etapas.
+
