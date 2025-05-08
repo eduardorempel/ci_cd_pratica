@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo HTML com JavaScript</title>
+</head>
+<body>
+  <h1>Olá, GitHub Actions!</h1>
+  <button onclick="mostrarMensagem()">Clique aqui</button>
+
+  <p id="mensagem"></p>
+
+  <script>
+    function mostrarMensagem() {
+      const p = document.getElementById('mensagem');
+      p.textContent = 'Você clicou no botão e acionou este JavaScript!';
+    }
+  </script>
+</body>
+</html>
